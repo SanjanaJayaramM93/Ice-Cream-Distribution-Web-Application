@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block title%}
+  {{page.name}}
+{% endblock %}
+{% block content%}
+<div class="px-4 px-lg-0">
+ <!-- Store Details-->
+  <div class="container  py-5 text-center">
+    <h2 class="display-4">{{page.store_name}}</h2>
+    <p class="lead mb-0">{{page.store_location}} </p>
+    <p class="lead">{{page.store_email}} </p>
+  </div>
+  <!-- Store Details End -->
+<!-- Tub List-->
+  <div class="pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
+          <!--Table-->
+            <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col" class="border-0 bg-light">
+                    <div class="p-2 px-3 text-uppercase">Tub</div>
+                  </th>
+                  <th scope="col" class="border-0 bg-light">
+                    <div class="py-2 text-uppercase">Flavour</div>
+                  </th>
+                  <th scope="col" class="border-0 bg-light">
+                    <div class="py-2 text-uppercase">Quantity</div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <!--For loop-->
+                {% for tub in tublist%}
+                
+                <tr>
+                  <th scope="row" class="border-0">
+                    <div class="p-2">
+                      <img src="{{tub.tub_image.url}}" alt="" width="90" class="img-fluid rounded shadow-sm">
+                     
+                    </div>
+                  </th>
+                  <td class="border-0 align-middle"><strong>{{tub.tub_flavour}}</strong></td>
+                  <td class="border-0 align-middle"><strong>{{tub.tub_size}}L</strong></td>
+                </tr>
+                {% endfor %}
+                <!--End For loop-->
+                <!--Total Volume-->
+                <tr>
+                  <th><button type="button" class="btn btn-dark  btn-lg ">Total Volume</button></th>
+                  <td></td> 
+                  <td><button type="button" class="btn btn-dark  btn-lg ms-auto ">{{totalvolume}}Litre</button></td> 
+                </tr>
+                <!--End total volume-->
+              </tbody>
+            </table>
+           <!--Table End-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Tub List end-->
+</div>
+{% endblock %}

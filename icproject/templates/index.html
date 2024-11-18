@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title%}Home{% endblock %}
+{% block content%}
+<div class="w-100  p-3" style="background-color: #F5FFFF;height: 85vh">
+    <div >
+        <div class="row">
+            
+              <h1 style="font-weight: bold;
+              line-height: 1.5;
+              font-size: 5.5rem;
+              text-align: center;
+              padding-block: 12rem;">Take a Look at Our New Flavours</h1>
+              <a href="{% url 'tubs' %}"><button type="button" class="btn  btn-lg download-btn " style="padding-left: 55rem;">Our Tubs</button></a>
+             <a href="{% url 'stores' %}"><button type="button"class="btn  btn-lg download-btn " style="padding-left: 55rem;">Our Stores</button></a>
+            
+            
+        </div>
+          </section>
+    </div>
+</div>
+{% endblock %}

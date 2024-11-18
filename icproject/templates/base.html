@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!--Title Block-->
+  <title>{% block title%}{% endblock %}</title>
+  <!--End Title Block-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!--Bootstrap-->
+  <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css ">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+
+</head>
+
+<body>
+<!--Navbar-->
+  <nav class="navbar bg-dark navbar-expand-md ">
+    <div class="container">
+      <div class="col-2 text-left pl-md-0">
+        <h2 class="text-white navbar-brand"> Camerry Ice Creams </h2>
+      </div>
+
+      <div class="collapse navbar-collapse justify-content-center col-md-8 navbar-collapse-3">
+        <ul class="navbar-nav justify-content-center  ms-auto fw-bold">
+          <li class="nav-item active">
+            <a class="nav-link text-white " href="{% url 'index' %}"> Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="{% url 'tubs' %}">Tubs </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="{% url 'stores' %}">Stores</a>
+          </li>
+        </ul>
+      </div>       
+    </div>
+  </nav>
+<!--End Navbar-->
+
+  {% block content%}{% endblock %}
+<!-- Footer -->
+<footer class="bg-dark  text-center text-white">
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+     <p>Copyright ⓒ {2023} <a href="https://github.com/CoderPenGuiNz">@ Sanjana Jayaram</a></p>
+   </div> 
+</footer>
+<!--End Footer-->
+<!--Bootstrap JavaScript-->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

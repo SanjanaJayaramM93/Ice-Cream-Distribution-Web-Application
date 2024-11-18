@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Stores
+{% endblock %}
+
+{% block content%}
+<h2 class="text-center display-1"> Stores </h2>
+<hr>
+
+{% for s in stores %}
+<div class="mx-auto w-50 bg-secondary bg-gradient text-center text-white p-3 my-3 border  rounded">
+    <h1>{{s.store_name}}</h1>
+    <p>{{s.store_location}}</p>
+    <p>{{s.store_email}}</p>
+    <!-- URL single store-->
+    <a href="{% url 'single_store' s.id %}" class="link-danger"> Store Link</a>
+</div>
+{% endfor %}
+
+{% endblock %}
